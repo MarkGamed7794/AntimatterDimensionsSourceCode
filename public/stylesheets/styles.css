@@ -6905,6 +6905,10 @@ kbd {
   font-size: 2.5rem;
 }
 
+.c-ra-pet-levelcap {
+  font-size: 1.75rem;
+}
+
 .l-ra-bar-container {
   display: flex;
   width: 100%;

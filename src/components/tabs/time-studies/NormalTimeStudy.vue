@@ -66,10 +66,11 @@ export default {
       <DescriptionDisplay
         :config="study.config"
       />
+      <i>
       <EffectDisplay
         br
         :config="study.config"
-      />
+      /></i>
     </span>
   </TimeStudyButton>
 </template>

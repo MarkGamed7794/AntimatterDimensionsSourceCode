@@ -138,7 +138,7 @@ export default {
     >
       <div class="c-ra-pet-title">
         <!-- The full name doesn't fit here, so we shorten it as a special case -->
-        {{ pet.id === "enslaved" ? "Nameless" : name }} Level {{ formatInt(level) }}/{{ formatInt(levelCap) }}
+        {{ pet.id === "enslaved" ? "Nameless" : name }} Level {{ formatInt(level) }}<span class="c-ra-pet-levelcap">/{{ formatInt(levelCap) }}</span>
       </div>
       <div
         v-if="showScalingUpgrade"
