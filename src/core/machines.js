@@ -26,6 +26,12 @@ export const MachineHandler = {
     // Increase base RM gain if <10 RM
     if (rmGain.gte(1) && rmGain.lt(10)) rmGain = new Decimal(27 / 4000 * log10FinalEP - 26);
     rmGain = rmGain.times(this.realityMachineMultiplier);
+
+    // Mark's Mod: slightly boost RM gain below 1e12000 EP (1e6 RM)
+    if(log10FinalEP < 12000){
+      rmGain = rmGain.times(Math.pow(2, Math.sqrt((12000 - log10FinalEP) / 8000)))
+    }
+
     return rmGain.floor();
   },
 
