@@ -37,6 +37,26 @@ visible tab and subtab, if such an entry exists.
       tab: ""
     },
     {
+      name: "Mark's Mod",
+      info: () => `
+Hello! Thank you so much for playing my mod.
+<br>
+<br>
+This is my first time making an AD mod, and I've also never made or worked on a full incremental game in any major capacity.
+Naturally, expect some inconsistencies, imbalances, and overall roughness around the edges. I please ask that you contact me
+if you have any questions, concerns, or suggestions. Especially suggestions.
+<br>
+<br>
+Here's everything <b>that has been modified from the original game</b> in order to make the overall experience less of a drag:
+<br>- A variety of minor visual improvements
+<br>- Eternity Challenge 11's requirement scales very slightly slower
+<br>- Reality Machine gain is boosted under ${formatInt(1e6)} RM (2nd Reality and onwards)
+`,
+      isUnlocked: () => true,
+      tags: [],
+      tab: ""
+    },
+    {
       name: "Your savefile",
       info: () => `
 Your game's save data is stored on your computer's browser data if you are playing on a web browser, or in your Steam
