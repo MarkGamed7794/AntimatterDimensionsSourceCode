@@ -99,6 +99,10 @@ export default {
       this.nextGlyphPercent = this.percentToNextGlyphLevelText();
       this.nextMachineEP = EPforRM(this.machinesGained.plus(1));
       this.ppGained = multiplier;
+      // Mark's Mod: first reality gives one extra Perk Point
+      if(player.realities <= 0){
+        this.ppGained += 1;
+      }
       this.shardsGained = Effarig.shardsGained * multiplier;
       this.currentShardsRate = (this.shardsGained / Time.thisRealityRealTime.totalMinutes);
       this.bestShardRate = player.records.thisReality.bestRSmin * multiplier;

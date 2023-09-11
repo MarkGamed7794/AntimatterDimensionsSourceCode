@@ -50,7 +50,8 @@ if you have any questions, concerns, or suggestions. Especially suggestions.
 Here's everything <b>that has been modified from the original game</b> in order to make the overall experience less of a drag:
 <br>- A variety of minor visual improvements
 <br>- Eternity Challenge 11's requirement scales very slightly slower
-<br>- Reality Machine gain is boosted under ${formatInt(1e6)} RM (2nd Reality and onwards)
+<br>- Your first Reality gives one extra Perk Point
+<br>- Reality Machine gain is boosted under ${formatInt(1e6)} RM
 `,
       isUnlocked: () => true,
       tags: [],
@@ -945,7 +946,7 @@ Glyph level scales off of a combination of Eternity Points, Replicanti, and Dila
 ${formatInt(1)}. The type, effects, and rarity of Glyphs are randomized.
 <br>
 <br>
-You get exactly ${formatInt(1)} Perk Point per Reality.
+You get exactly ${formatInt(1)} Perk Point per Reality, except on your first Reality, in which you get ${formatInt(2)}.
 <br>
 <br>
 <b>Hotkey: Y</b> will try to perform a Reality reset.
@@ -1021,7 +1022,7 @@ Perks are a type of upgrade unlocked upon Reality. Each Perk effect varies, but 
 improvements which you can choose your own path through. All Perks only require ${formatInt(1)} Perk Point to buy.
 <br>
 <br>
-Each Reality you gain ${formatInt(1)} Perk Point which can be spent on an upgrade on the tree, starting with
+Each Reality you gain ${formatInt(1)} Perk Point (and an extra ${formatInt(1)} on your first Reality) which can be spent on an upgrade on the tree, starting with
 "You can now choose from ${formatInt(Perk.firstPerk.config.effect)} Glyphs on Reality". You can only unlock Perks
 which are directly adjacent
 to Perks you already have, although there are loops in the tree which you can go through in either direction.

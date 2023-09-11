@@ -35,7 +35,7 @@ export default {
         Statistics tab. The first ${formatInt(13)} rows of Achievements are also reset,
         but you will automatically get one Achievement back every
         ${timeDisplayNoDecimals(30 * 60000)}. You will also gain Reality Machines based on your Eternity Points, a
-        Glyph with a level based on your Eternity Points, Replicanti, and Dilated Time, a Perk Point to spend
+        Glyph with a level based on your Eternity Points, Replicanti, and Dilated Time, two Perk Points to spend
         on quality of life upgrades, and unlock various upgrades.`;
     },
     canSacrifice() {
@@ -58,7 +58,7 @@ export default {
     gained() {
       const gainedResources = [];
       gainedResources.push(`${quantifyInt("Reality", this.simRealities)}`);
-      gainedResources.push(`${quantifyInt("Perk Point", this.simRealities)}`);
+      gainedResources.push(`${quantifyInt("Perk Point", this.simRealities * (player.realities <= 0 ? 2 : 1))}`);
       gainedResources.push(`${quantify("Reality Machine", this.realityMachines, 2)}`);
       if (this.effarigUnlocked) {
         gainedResources.push(`${quantify("Relic Shard", this.shardsGained, 2)}`);

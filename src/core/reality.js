@@ -1,4 +1,5 @@
 import { DC } from "./constants";
+import { Currency } from "./currency";
 
 /**
  * Object that manages the selection of glyphs offered to the player
@@ -310,6 +311,10 @@ function giveRealityRewards(realityProps) {
     MachineHandler.projectedIMCap);
   Currency.realities.add(realityAndPPMultiplier);
   Currency.perkPoints.add(realityAndPPMultiplier);
+  // Mark's Mod: first reality gives one extra perk point
+  if(player.realities <= 1) {
+    Currency.perkPoints.add(1)
+  }
   if (TeresaUnlocks.effarig.canBeApplied) {
     Currency.relicShards.add(realityProps.gainedShards * multiplier);
   }
