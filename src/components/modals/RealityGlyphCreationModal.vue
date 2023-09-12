@@ -71,7 +71,12 @@ export default {
           v-for="(effect, index) in possibleEffects"
           :key="index"
         >
-          {{ formatGlyphEffect(effect) }}
+          <span class="c-reality-glyph-disabledeffect" v-if="realityGlyphLevel < effect[0]">
+            {{ formatGlyphEffect(effect) }}
+          </span>
+          <span v-else>
+            {{ formatGlyphEffect(effect) }}
+          </span>
         </div>
       </div>
       <PrimaryButton

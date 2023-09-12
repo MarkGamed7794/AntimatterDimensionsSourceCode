@@ -137,7 +137,7 @@ export default {
         <p>
           Buy a Tesseract ({{ tesseractCountString }})
         </p>
-        <p>Increase dimension caps by {{ format(nextDimCapIncrease, 2) }}</p>
+        <p>Infinity Dimension caps {{ format(totalDimCap, 2) }} ➜ {{ format(nextDimCapIncrease, 2) }}</p>
         <p><b>Costs: {{ format(tesseractCost) }} IP</b></p>
       </button>
     </div>
