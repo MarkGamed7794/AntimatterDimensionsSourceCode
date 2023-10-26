@@ -479,12 +479,30 @@ export const tabs = [
     ]
   },
   {
+    key: "verity",
+    name: "Verity",
+    UIClass: "o-tab-btn--verity",
+    condition: () => true, // temp
+    id: 10,
+    hidable: true,
+    subtabs: [
+      {
+        key: "verity-dimensions",
+        name: "Verity Dimensions",
+        symbol: "🜨",
+        component: "VerityDimensionsTab",
+        id: 0,
+        hidable: true,
+      }
+    ]
+  },
+  {
     key: "shop",
     name: "Shop",
     newUIClass: "shop",
     hideAt: 1.5,
     condition: () => Cloud.isAvailable,
-    id: 10,
+    id: 11,
     hidable: true,
     subtabs: [
       {
